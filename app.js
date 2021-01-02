@@ -38,12 +38,12 @@ app.use(function (err, req, res, next) {
 	res.status(err.status || 500);
 	res.render("error");
 });
-mongoose
-	.connect("mongodb+srv://miral:1234@miral-brand.53avd.mongodb.net/090-final?retryWrites=true&w=majority", {
-		useNewUrlParser: true,
-		useUnifiedTopology: true,
-	})
-	.then(() => console.log("Connected to Mongo...."))
-	.catch((error) => console.log(error.message));
+mongoose.connect("mongodb+srv://maryam_012:maryam_0123@cluster0.uk6gw.mongodb.net/test",{ useNewUrlParser: true ,useUnifiedTopology: true}).then(()=>{
+  console.log("Connection to mongoDB Successfull");
+}).catch((err)=>{
+console.log("Connection error");
+console.log(err);
+});
+
 module.exports = app;
 

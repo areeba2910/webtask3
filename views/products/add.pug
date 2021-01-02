@@ -1,22 +1,22 @@
 extends ../layout
 
 block content
-    h1 Add New Product
+    h1 Add Product
     form(action="/products/add",method="post")
         .form-group
-            label(for="prName") Product Name
+            label(for="prName") Name
             input#prName(type="text", class="form-control", name="prName")
         .form-group
-            label(for="prCategory") Product Category
+            label(for="prCategory") Category
             input#prCategory(type="text", class="form-control", name="prCategory")
         .form-group
-            label(for="prPrice") Product Price
+            label(for="prPrice")  Price
             input#prPrice(type="text", class="form-control", name="prPrice")
         .form-group
-            label(for="prDetails") Product Details
+            label(for="prDetails")  Details
             input#prDetails(type="text", class="form-control", name="prDetails")
         .form-group
-            label(for="prImage") Product Image
+            label(for="prImage") Image
             input#prImage(type="file", class="form-control", name="prImage", accept='image/*')
         input(type="submit", class="btn btn-info")
     

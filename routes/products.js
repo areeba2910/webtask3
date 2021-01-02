@@ -14,7 +14,7 @@ const upload = multer({
 
 router.get("/", async function (req, res, next) {
 	let products = await Product.find();
-	res.render("products/list", { title: "Clothes Available for both Men and Women", products });
+	res.render("products/list", { title: "Add products", products });
 });
 
 router.get("/add" , async function (req, res, next) {
